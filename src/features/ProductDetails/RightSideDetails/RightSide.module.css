@@ -1,0 +1,110 @@
+.details {
+  padding: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ratingsInfo {
+  display: flex;
+  /* background-color: bisque; */
+  gap: 10px;
+  align-items: center;
+}
+.ratingsInfo p {
+  color: rgb(29, 153, 236);
+}
+.starFilled {
+  color: gold;
+}
+.starEmpty {
+  color: gray;
+}
+.brand {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  color: rgb(29, 153, 236);
+}
+.brand i {
+  color: gray;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.addtoCarts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* margin-top: 20px; */
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.prices div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.prices div span {
+  text-decoration: line-through;
+  color: gray;
+}
+.prices div p {
+  font-size: 15px;
+}
+
+.cartsOperation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quantity {
+  display: flex;
+  color: gray;
+  gap: 20px;
+}
+
+.quantity div {
+  display: flex;
+  gap: 5px;
+
+  align-items: center;
+}
+
+.quantity div input {
+  width: 30px;
+  outline: none;
+  padding: 5px;
+  border: none;
+  text-align: center;
+  background-color: none;
+  border-radius: 5px;
+}
+.buyNow {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.description {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

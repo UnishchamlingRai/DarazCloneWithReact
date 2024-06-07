@@ -1,0 +1,44 @@
+.slider {
+  /* Styles for the slider container */
+  display: flex;
+  position: relative; /* For button positioning */
+  border-radius: 10px;
+  flex: 4;
+}
+
+.slider img {
+  /* Styles for the slider image */
+  width: 100%; /* Responsive image width */
+  object-fit: cover; /* Crop image to fit container */
+  border-radius: 10px;
+}
+
+.prev-button,
+.next-button {
+  /* Styles for slider navigation buttons */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center buttons vertically */
+  padding: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+  color: #fff; /* White text */
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 10px; /* Position left button */
+}
+
+.next-button {
+  right: 10px; /* Position right button */
+}
+
+/* Add media queries for responsive design here (optional) */
+
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens (if needed) */
+  .slider img {
+    /* Adjust image width or height */
+  }
+}

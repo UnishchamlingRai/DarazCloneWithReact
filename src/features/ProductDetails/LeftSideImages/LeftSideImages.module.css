@@ -1,0 +1,44 @@
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+.thumbnail {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumbnail img {
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
+  cursor: zoom-in;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid gray;
+}
+
+.selectedImage {
+  width: 80px;
+  height: 80px;
+  border: 1px solid red;
+  transform: scale(1.1);
+}

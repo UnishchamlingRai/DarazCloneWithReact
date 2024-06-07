@@ -1,0 +1,40 @@
+.button {
+  /* Base styles for all buttons */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.primary {
+  /* Styles for primary button variant */
+  background-color: #007bff;
+  color: #fff;
+}
+
+.secondary {
+  /* Styles for secondary button variant */
+  background-color: #555353;
+  color: white;
+}
+.secondary:hover {
+  background-color: #7b7676;
+  color: white;
+}
+
+.large {
+  /* Styles for large button size */
+  font-size: 18px;
+}
+
+.small {
+  /* Styles for small button size */
+  font-size: 14px;
+  padding: 5px 10px;
+}
+.disable {
+  background-color: rgba(148, 141, 141, 0.686);
+  /* color: black; */
+  color: rgba(148, 141, 141, 0.686);
+  cursor: not-allowed;
+}

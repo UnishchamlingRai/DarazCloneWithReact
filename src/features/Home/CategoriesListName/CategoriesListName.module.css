@@ -1,0 +1,55 @@
+/* src/components/Categories/Categories.module.css */
+.categories {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  /* padding: 2px; */
+  /* margin: 5px 0; */
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.categoryItem:hover {
+  background-color: #f0f0f0;
+}
+
+.icon {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.name {
+  font-size: 15px;
+  color: gray;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .categories {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .categoryItem {
+    padding: 8px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+}

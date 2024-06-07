@@ -1,0 +1,42 @@
+.productItem {
+  flex: 1 1 calc(25% - 20px);
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 15px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.productItem:hover {
+  transform: translateY(-5px);
+}
+
+.productItem img {
+  width: 100%;
+  height: auto;
+}
+
+.productInfo {
+  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.afterDiscount {
+  font-size: 18px;
+  color: #ff6600;
+}
+.price {
+  text-decoration: line-through;
+  font-size: 10px;
+  color: gray;
+}
+.freeDelivery {
+  font-size: 11px;
+  /* border: 1px solid blue; */
+  color: rgb(34, 128, 128);
+}

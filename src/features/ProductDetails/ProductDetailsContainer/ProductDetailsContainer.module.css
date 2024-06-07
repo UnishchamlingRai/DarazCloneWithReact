@@ -1,0 +1,19 @@
+.container {
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 40px;
+  background-color: white;
+}
+
+.reviewsAndRatings {
+  background-color: #fff;
+}
+.reviewsAndRatings p {
+  background-color: #ddd;
+  margin-top: 20px;
+  padding: 20px;
+}

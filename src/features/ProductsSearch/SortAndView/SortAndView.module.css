@@ -1,0 +1,20 @@
+.sortAndView {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sortAndView select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.viewToggle button {
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -1,0 +1,108 @@
+/* src/RatingSummary.module.css */
+.ratingSummary {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 20px;
+  /* background-color: #fff; */
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid #ddd;
+}
+
+.overallRating {
+  text-align: left;
+  height: 150px;
+  width: 300px;
+  /* border: 1px solid black; */
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+.ratingValue {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  color: #ffb400;
+}
+
+.ratingNumber {
+  margin-right: 10px;
+}
+
+.topRated {
+  background-color: #ffb400;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.5em;
+}
+
+.stars {
+  /* margin: 10px 0; */
+}
+
+.star {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffb400;
+}
+
+.totalRatings {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.breakdown {
+  /* flex-grow: 1; */
+  margin-left: 20px;
+  width: 300px;
+  height: 150px;
+
+  padding: 20px;
+}
+
+.breakdownItem {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 5px; */
+  padding: 0px;
+  gap: 10px;
+}
+
+.progressBar {
+  /* flex-grow: 1; */
+  height: 5px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  /* margin: 0 10px; */
+  position: relative;
+  width: 100px;
+}
+
+.filledBar {
+  height: 100%;
+  background-color: #ffb400;
+  border-radius: 5px;
+}
+
+.count {
+  width: 30px;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .ratingSummary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .breakdown {
+    margin-left: 0;
+    width: 100%;
+  }
+}

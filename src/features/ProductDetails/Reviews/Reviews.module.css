@@ -1,0 +1,145 @@
+/* src/Reviews.module.css */
+.reviewsContainer {
+  padding: 20px;
+  background-color: #fff;
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filterButton {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filterButton:hover,
+.filterButton:focus {
+  background: #e0e0e0;
+}
+
+.sortBy {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.sortBy span {
+  margin-right: 10px;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review {
+  padding: 15px;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 1.5em;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffb400;
+}
+
+.author {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.comment {
+  margin: 10px 0;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.actionButton:hover,
+.actionButton:focus {
+  color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .reviewsContainer {
+    padding: 10px;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .filterButton {
+    margin-bottom: 10px;
+  }
+
+  .sortBy {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .reviewsList {
+    gap: 10px;
+  }
+
+  .review {
+    padding: 10px;
+  }
+}
+
+.activeStar {
+  border: 1px solid red;
+}
