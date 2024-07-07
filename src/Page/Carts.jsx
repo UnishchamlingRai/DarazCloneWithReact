@@ -1,4 +1,4 @@
-import CartsContainer from "../features/Cart/CartsContainer";
+import CartsContainer from "../features/Cart/cartsContainer/CartsContainer";
 function Carts() {
   return (
     <>

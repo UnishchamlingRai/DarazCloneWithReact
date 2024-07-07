@@ -8,13 +8,14 @@ import RightSideDetails from "../RightSideDetails/RightSideDetails";
 import LeftSideImages from "../LeftSideImages/LeftSideImages";
 import RatingSummary from "../RatingSummary/RatingSummary";
 import Reviews from "../Reviews/Reviews";
+import LoadingSpinner from "../../../UI/LoadingSpinner/LoadingSpinner";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const { product, isLoading } = useProduct(id);
-  console.log(product);
+  // console.log(product);
 
-  if (isLoading) return <h1>Loading....</h1>;
+  if (isLoading) return <LoadingSpinner />;
   return (
     <div className={styles.container}>
       <div className={styles.details}>

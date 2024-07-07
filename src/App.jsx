@@ -10,6 +10,10 @@ import Login from "./features/Auth/Login/Login";
 import SignUp from "./features/Auth/SignUp/SignUp";
 import Carts from "./Page/Carts";
 import CartsProvider from "./contexts/cartsContext";
+import { UserProvider } from "./contexts/userContext";
+import ProtectedRoute from "./UI/ProtectedRoute/ProtectedRoute";
+import MyProfilePage from "./Page/MyProfile";
+import Footer from "./UI/Footer/Footer";
 // import ProductSearchSection from "./Page/ProductsSearch/ProductSearchSection";
 
 function App() {
@@ -20,7 +24,8 @@ function App() {
       <ReactQueryDevtools initialIsOpen={false} />
       <BrowserRouter>
         <CartsProvider>
-          <Navbar />
+         <UserProvider>
+         <Navbar />
           <div className="app">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -31,14 +36,17 @@ function App() {
               />
               <Route path="login" element={<Login />} />
               <Route path="signUp" element={<SignUp />} />
-              <Route path="carts" element={<Carts />} />
+              
+              <Route path="carts" element={<ProtectedRoute><Carts /></ProtectedRoute>} />
+              <Route path="myprofile" element={<ProtectedRoute><MyProfilePage /></ProtectedRoute>} /> 
               <Route path="*" element={<h1>No page Found</h1>} />
               {/* Add more routes here as needed */}
             </Routes>
           </div>
           <footer>
-            <h1>This is Footer</h1>
+            <Footer />
           </footer>
+         </UserProvider>
         </CartsProvider>
       </BrowserRouter>
     </QueryClientProvider>

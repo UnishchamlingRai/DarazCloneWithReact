@@ -7,6 +7,7 @@ import ProductItem from "../../features/ProductsSearch/ProductItems/ProductItem"
 import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../../features/Products/useProducts";
 import Pagination from "../../UI/Pagination/Pagination";
+import LoadingSpinner from "../../UI/LoadingSpinner/LoadingSpinner";
 
 const ProductSearchSection = () => {
   const [searchParams] = useSearchParams();
@@ -23,7 +24,7 @@ const ProductSearchSection = () => {
 
   const { isLoading, products, totalPages } = useProducts(page, query, sortBy);
   console.log("SearchProducts:", products);
-  if (isLoading) return <h1>Loading.....</h1>;
+  if (isLoading) return <LoadingSpinner />;
   if (products.products.length <= 0) {
     return <h1>No Product Found </h1>;
   }

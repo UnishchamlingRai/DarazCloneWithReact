@@ -1,0 +1,21 @@
+.cartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cartItems {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+@media (max-width: 768px) {
+  .cartContainer {
+    flex-direction: column;
+  }
+
+  .orderSummary {
+    margin-top: 20px;
+  }
+}

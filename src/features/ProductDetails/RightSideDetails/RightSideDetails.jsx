@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Button from "../../../UI/Button/Button";
 import styles from "./RightSide.module.css";
+import { useCarts } from "../../../contexts/cartsContext";
 function RightSideDetails({ product }) {
   const [quantity, setQuantity] = useState(1);
+  const {carts,dispatch}=useCarts()
+  console.log(product);
   const {
     rating,
     reviews,
@@ -17,10 +20,30 @@ function RightSideDetails({ product }) {
     brand,
     availabilityStatus,
     title,
+    thumbnail,
+    id
   } = product;
   const afterDiscountPrice = price - (price * discountPercentage) / 100;
+  const isAddedToCart = carts.some((item) => item.id === id);
 
-  console.log(stock, availabilityStatus);
+  function handelAddToCart() {
+    const cartItem = {
+      id: id,
+      name: title,
+      description: description,
+      price: price,
+      discountedPrice: afterDiscountPrice,
+      quantity: quantity,
+      selected: true,
+      image: thumbnail,
+      stock:stock,
+      discountPercentage:discountPercentage
+    }
+    dispatch({type:"carts/add",payload:cartItem})
+
+  }
+
+  // console.log(stock, availabilityStatus);
   return (
     <div className={styles.details}>
       <div className={styles.info}>
@@ -64,7 +87,7 @@ function RightSideDetails({ product }) {
               <Button
                 bgcolor={"gray"}
                 onClick={() => setQuantity((quantity) => quantity - 1)}
-                disable={quantity <= 1}
+                disable={quantity <= 1 || isAddedToCart}
               >
                 -
               </Button>
@@ -72,11 +95,13 @@ function RightSideDetails({ product }) {
                 type="text"
                 value={quantity}
                 onChange={(e) => setQuantity(Number(e.target.value))}
+                disabled={isAddedToCart}
+               
               />
               <Button
                 bgcolor={"gray"}
                 onClick={() => setQuantity((quantity) => quantity + 1)}
-                disable={quantity >= stock}
+                disable={quantity >= stock || isAddedToCart}
               >
                 +
               </Button>
@@ -86,8 +111,8 @@ function RightSideDetails({ product }) {
             <Button variant="primary" size="large">
               Buy Now
             </Button>
-            <Button variant="primary" size="large" bgcolor={"orange"}>
-              Add to Cart
+            <Button onClick={handelAddToCart} disable={isAddedToCart} variant="primary" size="large" bgcolor={"orange"}>
+              {isAddedToCart ? "Already Added To Cart" : "Add To Cart"}
             </Button>
           </div>
         </div>

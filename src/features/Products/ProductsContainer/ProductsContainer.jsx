@@ -5,17 +5,16 @@ import { useProducts } from "../useProducts";
 import style from "./ProductsContainer.module.css";
 import Pagination from "../../../UI/Pagination/Pagination";
 import { useSearchParams } from "react-router-dom";
+import LoadingSpinner from "../../../UI/LoadingSpinner/LoadingSpinner";
 
 function ProductsContainer() {
   // const [page, setPage] = useState(1);
   const [searchParams] = useSearchParams();
   const page = Number(searchParams.get("page"));
   const { isLoading, products, totalPages } = useProducts(page);
-  console.log("Proudcts:", products);
 
-  console.log("TotalPage:", totalPages);
 
-  if (isLoading) return <h1>Loading</h1>;
+  if (isLoading) return <LoadingSpinner />;
 
   return (
     <div className={style.productsContainer}>

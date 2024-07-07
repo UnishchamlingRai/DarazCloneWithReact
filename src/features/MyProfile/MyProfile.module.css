@@ -1,0 +1,66 @@
+/* MyProfile.module.css */
+.profileContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .profileSections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .personalProfile, .addressBook {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .editLink, .addLink {
+    color: #3498db;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .newsletterLink {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .recentOrders {
+    margin-top: 20px;
+  }
+  
+  .ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .ordersTable th, .ordersTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .productImage {
+    width: 50px;
+    height: auto;
+  }
+  
+  .manageLink {
+    color: #3498db;
+    text-decoration: none;
+  }
+  

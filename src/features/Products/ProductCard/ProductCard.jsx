@@ -6,7 +6,7 @@ import CommonRatingStar from "../../../UI/CommonRatingStar/CommonRatingStar";
 function ProductCard({ product }) {
   const { thumbnail, title, rating, price, discountPercentage, id } = product;
   const afterDiscountPrice = price - (price * discountPercentage) / 100;
-  console.log(product);
+ 
   // https://dummyjson.com/products?limit=10&skip=10&select=price,description,discountPercentage,rating,thumbnail
   return (
     <Link to={`products/${id}`} className={styles.productLink}>
