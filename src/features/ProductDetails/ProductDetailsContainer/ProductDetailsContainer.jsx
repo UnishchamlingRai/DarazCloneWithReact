@@ -13,8 +13,10 @@ import LoadingSpinner from "../../../UI/LoadingSpinner/LoadingSpinner";
 const ProductDetails = () => {
   const { id } = useParams();
   const { product, isLoading } = useProduct(id);
-  // console.log(product);
 
+  // useEffect(() => {
+  //   document.title = `${product?.title} | Daraz`;
+  // }, [product.title]);
   if (isLoading) return <LoadingSpinner />;
   return (
     <div className={styles.container}>
